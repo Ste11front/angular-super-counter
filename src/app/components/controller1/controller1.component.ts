@@ -13,14 +13,10 @@ export class Controller1Component {
   @Output() reset = new EventEmitter<number>();
 
   increaseCounter() {
-
     this.increase.emit(1);
-
   }
 
   resetCounter() {
-
     this.reset.emit(0);
-
   }
 }

@@ -12,8 +12,15 @@ import { CommunicationService } from 'src/app/services/communication.service';
 export class Counter2Component implements OnInit {
   count: number = 0;
   constructor(private commService: CommunicationService) {}
+
   ngOnInit(): void {
     this.commService.increase.subscribe((n) => this.count = this.count + n);
     this.commService.reset.subscribe((n) => this.count = n);
+
+    const tempArray = [1,2,3,4];
+
+    const newArray = tempArray.map(n => ({risultato: n * 2, numeroOriginale: n}));
+
+    console.log(newArray);
   }
 }
